@@ -3,7 +3,7 @@ const { getStudents, createScoreCard, getRanks } = require('../controllers/teach
 const { authenticated, isTeacher } = require('../middleware/auth');
 const router = express.Router();
 
-router.get('/teacher/student', authenticated, isTeacher, getStudents);
+router.get('/teacher/students', authenticated, isTeacher, getStudents);
 
 router.post('/teacher/scorecard/:studentId', authenticated, isTeacher, createScoreCard);
 
